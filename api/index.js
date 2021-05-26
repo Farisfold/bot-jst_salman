@@ -38,7 +38,7 @@ bot.onText(/\/predict/, (msg) => {
 });
 
 bot.on ('messsage', (msg) => { 
-If (State == 1){
+If(State == 1){
     console.log(msg.text);
     s = msg.text.split ("|");
     i = s[0]
@@ -48,7 +48,7 @@ If (State == 1){
         parseFloat(s[0]), // string to float
         parseFloat(s[1])
     ]
-).then((jres)=>{
+ ).then((jres)=>{
     bot.sendMessage(
         msg.chat.id,
         `nilai v yang diprediksi adalah ${jres=0}volt`
