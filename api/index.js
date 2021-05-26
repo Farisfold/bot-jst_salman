@@ -37,7 +37,7 @@ bot.onText(/\/predict/, (msg) => {
     State = 1;
 });
 
-bot.on ('masssage', (msg) => { 
+bot.on ('messsage', (msg) => { 
     If (State == 1){
         console.log(msg.text);
         s = msg.text.split ("|");
@@ -51,14 +51,15 @@ bot.on ('masssage', (msg) => {
     ).then((jres)=>{
        bot.sendMessage(
         msg.chat.id,
-        `nilai v yang diprediksi adalah s(jres=0)volt`
-     ])
+        `nilai v yang diprediksi adalah s{jres=0}volt`
+     );
         bot.sendMessage(
         msg.chat.id,
-        `nilai p yang diprediksi adalah s(jres=1)watt`
-     ])   
-        }else{
-           State = 0
+        `nilai p yang diprediksi adalah s{jres=1}watt`
+     );
+    })
+}else{
+      State = 0
            }
 })
 
