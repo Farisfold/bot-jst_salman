@@ -43,7 +43,7 @@ If (State == 1){
     s = msg.text.split ("|");
     i = s[0]
     v = s[1]
-model.predict(
+    model.predict(
     [
         parseFloat(s[0]), // string to float
         parseFloat(s[1])
@@ -51,11 +51,11 @@ model.predict(
 ).then((jres)=>{
     bot.sendMessage(
         msg.chat.id,
-        `nilai v yang diprediksi adalah s{jres=0}volt`
+        `nilai v yang diprediksi adalah ${jres=0}volt`
     );
     bot.sendMessage(
         msg.chat.id,
-        `nilai p yang diprediksi adalah s{jres=1}watt`
+        `nilai p yang diprediksi adalah ${jres=1}watt`
     );
 })
 }else{
