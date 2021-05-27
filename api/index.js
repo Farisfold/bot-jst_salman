@@ -55,7 +55,6 @@ bot.on('message', (msg) => {
     }
 })
 
-//input requires i and r
 
 // routers
 r.get('/prediction/:i/:r', function(req, res, next) {    
